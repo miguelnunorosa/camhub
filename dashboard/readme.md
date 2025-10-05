@@ -107,3 +107,30 @@ docker-compose exec react-dev npm install --save-dev nome-do-pacote
 1. Execute `docker-compose up --build`
 2. Abra `http://localhost:3000`
 3. Comece a programar! 🚀
+
+
+src/
+│
+├── assets/              # Arquivos estáticos, como imagens e fontes
+│   └── logo.png         # Logo da aplicação
+│
+├── components/          # Componentes reutilizáveis
+│   ├── Header.js        # Cabeçalho, se necessário
+│   ├── Sidebar.js       # Barra lateral
+│   └── ...              # Outros componentes reutilizáveis
+│
+├── pages/               # Páginas do aplicativo (como Login, Dashboard, etc.)
+│   ├── Login.js         # Tela de Login
+│   └── Dashboard.js     # Página principal do Dashboard
+│
+├── services/            # Lógica de comunicação com API ou funções utilitárias
+│   ├── authService.js   # Funções relacionadas à autenticação
+│   └── apiService.js    # Funções de chamada de API, se necessário
+│
+├── theme/               # Arquivos relacionados ao tema da aplicação
+│   └── theme.js         # Definições de temas (escuro, claro, etc.)
+│
+├── App.js               # Componente principal que renderiza o App
+├── index.js             # Ponto de entrada do React
+└── styles/              # Arquivos de estilo (CSS ou SCSS)
+    └── global.css       # Estilos globais, como reset ou fontes
