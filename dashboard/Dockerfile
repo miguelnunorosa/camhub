@@ -1,7 +1,7 @@
-# Use Node.js 20 LTS como base
+# Use Node.js 18 LTS como base
 FROM node:20-alpine
 
-# Instalar dependências do sistema (necessário)
+# Instalar dependências do sistema necessárias
 RUN apk add --no-cache git
 
 # Definir diretório de trabalho
