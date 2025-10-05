@@ -8,7 +8,7 @@
 /* Estilo para o body */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f2f2f2; /* Cor de fundo clara */
+  background-color: #f4f6f8; /* Cor de fundo suave */
 }
 
 /* Container para o formulário */
@@ -36,72 +36,34 @@ body {
   margin-bottom: 20px;
 }
 
-/* Estilo dos campos de entrada */
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 15px;
-  margin: 10px 0;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-/* Efeito de foco nos campos de entrada */
-input[type="email"]:focus,
-input[type="password"]:focus {
-  outline: none;
-  background-color: #e0e0e0;
+/* Estilo para o campo de texto */
+.MuiTextField-root {
+  margin-bottom: 15px;
 }
 
 /* Estilo do botão de login */
-button {
-  width: 100%;
-  padding: 15px;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #45a049;
+.MuiButton-root {
+  margin-top: 20px;
 }
 
 /* Links para memorizar login e recuperar senha */
 .links-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .links-container a {
-  color: #333;
-  font-size: 13px;  /* Reduzido um pouco para ser mais sutil */
+  color: #1976d2;
   text-decoration: none;
-  margin-top: 5px;
 }
 
 .links-container a:hover {
   text-decoration: underline;
 }
 
-/* Estilo para o checkbox de "Memorizar login" */
-input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-/* Adicionando um pouco mais de distância entre a checkbox e o link */
-.links-container label {
-  margin-bottom: 5px;
-}
-
-/* Mensagem de erro */
+/* Estilo para a mensagem de erro */
 .error-message {
   color: #e74c3c;
   font-size: 14px;

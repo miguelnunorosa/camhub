@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import { TextField, Button, Checkbox, FormControlLabel, Link } from '@mui/material';
 import '../styles/login.css'; // Importe o arquivo CSS para estilização
 
 // Importe o logo do clube
-import Logo from '../assets/logo.png';  // Ajuste o caminho do logo conforme necessário
+import Logo from '../assets/logo.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);  // Para "Memorizar login"
+  const [rememberMe, setRememberMe] = useState(false); // Para "Memorizar login"
   const [error, setError] = useState('');
 
   const handleLogin = (e) => {
@@ -37,41 +38,48 @@ const Login = () => {
 
         {/* Formulário de login */}
         <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
+          <TextField
+            label="Email"
+            variant="outlined"
+            fullWidth
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            margin="normal"
           />
-          <input
+          <TextField
+            label="Senha"
+            variant="outlined"
             type="password"
-            name="password"
-            placeholder="Senha"
+            fullWidth
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
             required
+            margin="normal"
           />
 
           {/* Mensagem de erro */}
           {error && <div className="error-message">{error}</div>}
 
-          {/* Checkbox "Memorizar login" */}
+          {/* Checkbox "Memorizar login" e Link "Recuperar senha" */}
           <div className="links-container">
-            <label>
-              <input
-                type="checkbox"
-                checked={rememberMe}
-                onChange={handleRememberMe}
-              />
-              Memorizar login
-            </label>
-            <a href="#">Recuperar senha</a>
+            <FormControlLabel
+              control={<Checkbox checked={rememberMe} onChange={handleRememberMe} />}
+              label="Memorizar login"
+            />
+            <Link href="#" variant="body2">Recuperar senha</Link>
           </div>
 
           {/* Botão de login */}
-          <button type="submit">Entrar</button>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            fullWidth
+            style={{ marginTop: '20px' }}
+          >
+            Entrar
+          </Button>
         </form>
       </div>
     </div>
