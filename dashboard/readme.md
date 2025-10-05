@@ -109,6 +109,7 @@ docker-compose exec react-dev npm install --save-dev nome-do-pacote
 3. Comece a programar! 🚀
 
 
+```bash
 src/
 │
 ├── assets/              # Arquivos estáticos, como imagens e fontes
@@ -134,3 +135,4 @@ src/
 ├── index.js             # Ponto de entrada do React
 └── styles/              # Arquivos de estilo (CSS ou SCSS)
     └── global.css       # Estilos globais, como reset ou fontes
+```
